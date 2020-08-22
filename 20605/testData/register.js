@@ -5,7 +5,7 @@ const newUser = {
   lastName: faker.name.lastName(),
   email: faker.internet.email().toLowerCase(),
   password: faker.internet.password(),
-  phone: faker.phone.phoneNumber('###########') //11
+  phone: faker.phone.phoneNumber('###########'), //11
 };
 
 const negativeRegisterStep1 = {
@@ -16,27 +16,27 @@ const negativeRegisterStep1 = {
 };
 
 const inputRegisterStep1 = {
-    firstLastNameMin: 'A',
-    firstLastNameMax: `${'a'.repeat(20)}`,
-    firstLastName3: 'a\'sssa-',
-    email: 'Asdfgh@mail.us',
-    password: 'Azxcvb@123'
-}
+  firstLastNameMin: 'A',
+  firstLastNameMax: `${'a'.repeat(20)}`,
+  firstLastName3: "a'sssa-",
+  email: 'Asdfgh@mail.us',
+  password: 'Azxcvb@123',
+};
 
 const negativeRegisterStep2 = {
-    invalidPhoneNumberMin: `${'5'.repeat(9)}`,
-    invalidPhoneNumberMax: `${'5'.repeat(12)}`,
-    symbolsInvalidPhoneNumber: `${'#'.repeat(10)}`,
-    lettersUppInvalidPhoneNumber: `${'C'.repeat(12)}`,
-    lettersLowerInvalidPhoneNumber: `${'a'.repeat(10)}`,
-    invalidPhoneNumberBackSpace: `${' '.repeat(10)}`,
-    invalidPhoneNumberEmpty: ''
+  invalidPhoneNumberMin: `${'5'.repeat(9)}`,
+  invalidPhoneNumberMax: `${'5'.repeat(12)}`,
+  symbolsInvalidPhoneNumber: `${'#'.repeat(10)}`,
+  lettersUppInvalidPhoneNumber: `${'C'.repeat(12)}`,
+  lettersLowerInvalidPhoneNumber: `${'a'.repeat(10)}`,
+  invalidPhoneNumberBackSpace: `${' '.repeat(10)}`,
+  invalidPhoneNumberEmpty: '',
 };
 
 const functionalRegisterStep2 = {
-  validPhoneNumberMin:  `${'7'.repeat(10)}`,
-  validPhoneNumberMax:  `${'7'.repeat(11)}`,
+  validPhoneNumberMin: `${'7'.repeat(10)}`,
+  validPhoneNumberMax: `${'7'.repeat(11)}`,
   countryFieldRussia: 'Russia',
-  countryCodeRussia: '+7'
-}
-export {newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2, functionalRegisterStep2}
+  countryCodeRussia: '+7',
+};
+export { newUser, inputRegisterStep1, negativeRegisterStep1, negativeRegisterStep2, functionalRegisterStep2 };

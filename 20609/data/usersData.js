@@ -1,4 +1,4 @@
 const studentData = {
-  passwordNew: "studentNewPassword"
-}
-export { studentData};
+  passwordNew: 'studentNewPassword',
+};
+export { studentData };

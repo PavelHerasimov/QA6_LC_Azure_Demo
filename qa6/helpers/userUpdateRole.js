@@ -6,7 +6,7 @@ export const userUpdateRole = async (userEmail, userPassword, role) => {
     email: `${userEmail}`,
     password: `${userPassword}`,
   });
-  process.env.RANDOMUSER_ID = resp.data.userId
+  process.env.RANDOMUSER_ID = resp.data.userId;
 
   return axios({
     method: 'patch',
@@ -24,7 +24,7 @@ export const userUpdateRole = async (userEmail, userPassword, role) => {
 
 // to call the function in your tests After hook should be added similar to below.
 // Before you need register user using faker or using yourself user (do not change role of Julia users).
-// Example of using userUpdateRole in our folder smoke => settingsPassword.specs.smoke.js
+// Example of using userUpdateRole in our folder smoke => settingsPassword.spec.js
 
 // describe('', () => {
 //   it('Should update role a user', async () => { // can be before, after, it

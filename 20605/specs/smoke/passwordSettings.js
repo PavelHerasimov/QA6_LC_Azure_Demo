@@ -10,7 +10,7 @@ import waitTime from '../../../testData/waitTimes';
 import { userDeleteByEmail } from '../../helpers/axios/userDeleteByEmail';
 
 describe('UPDATE PASSWORD IN SETTINGS', () => {
-  it('TC-199 User (new) can update password in settings', function () {
+  it('TC-199 User (new) can update password in settings', () => {
     RegisterPage.open();
     RegisterPage.registerUser(newUser);
     RegisterStep2Page.registerUserStep2(newUser);
@@ -25,9 +25,8 @@ describe('UPDATE PASSWORD IN SETTINGS', () => {
   });
 });
 
-after ('Should delete a user', async () => {
+after('Should delete a user', async () => {
   const res = await userDeleteByEmail(newUser.email);
   console.log('delete ' + res.success);
   expect(res.success).eq(true);
 });
-

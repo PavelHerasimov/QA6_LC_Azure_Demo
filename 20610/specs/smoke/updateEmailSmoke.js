@@ -16,7 +16,7 @@ describe('RESET OLD EMAIL AND LOGIN WITH NEW EMAIL FOR NEW USER SMOKE)', () => {
   });
 
   it('RE01 Should reset email for new user and login with the new email', () => {
-    SettingsEmailPage.updateEmail(newUser.email, newUser.newEmail)
+    SettingsEmailPage.updateEmail(newUser.email, newUser.newEmail);
     ProfilePage.logout();
     LoginPage.login(newUser.newEmail, newUser.password);
   });

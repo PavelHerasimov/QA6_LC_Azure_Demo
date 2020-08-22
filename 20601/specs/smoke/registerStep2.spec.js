@@ -12,14 +12,12 @@ describe('USER REGISTER STEP2', () => {
     RegisterPage.open();
     RegisterPage.registerUser(newUser);
     RegisterStep2Page.registerUserStep2(newUser);
-    expect((ProfilePage.headerProfile).getText()).eq(newUser.firstName + ' ' + newUser.lastName);
+    expect(ProfilePage.headerProfile.getText()).eq(newUser.firstName + ' ' + newUser.lastName);
   });
 
-  xit('should skip the Registration Step2 and open Main Page', function () {
+  xit('should skip the Registration Step2 and open Main Page', () => {
     RegisterStep2Page.open();
     RegisterStep2Page.skipBtn.click();
     expect(ProfilePage.headerProfile.getText()).contains(newUser.firstName);
   });
 });
-
-

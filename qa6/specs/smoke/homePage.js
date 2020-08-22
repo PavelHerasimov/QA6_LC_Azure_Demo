@@ -4,12 +4,11 @@ import RegisterPage from '../../../pageObjects/register.page';
 import expected from '../../data/expected.json';
 
 describe('CHECK the HOME PAGE LINKS', () => {
-
   before(() => {
     HomePage.open();
   });
 
-  it('HP01 Verify that Register link open Register Page',  () => {
+  it('HP01 Verify that Register link open Register Page', () => {
     HomePage.registerLink.click();
     expect(RegisterPage.headerRegister.getText()).eq(expected.pagesHeaders.RegisterPageHeader);
   });

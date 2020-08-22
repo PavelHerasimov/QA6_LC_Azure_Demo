@@ -24,24 +24,24 @@ class AdminSearchForUsers extends BasePage {
     return $('#role');
   }
 
-  get linkToUserProfile (){
+  get linkToUserProfile() {
     return $('[href="/profile/5f1f86b986482d011633f20c"]');
   }
 
-  get userPhoneEmail(){
+  get userPhoneEmail() {
     return $$('.col-md-2');
   }
 
-  get arraysOfRoles(){
+  get arraysOfRoles() {
     return $$('.ant-select-item-option-content');
   }
 
-  get allInputFields (){
-    return $$('.ant-form-item-control-input')
+  get allInputFields() {
+    return $$('.ant-form-item-control-input');
   }
 
-  get roleLabelText(){
-    return $('.col-md-1')
+  get roleLabelText() {
+    return $('.col-md-1');
   }
 }
 

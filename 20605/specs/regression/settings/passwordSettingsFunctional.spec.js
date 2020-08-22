@@ -7,7 +7,7 @@ import { passwordSettingsTestResult } from '../../../testResult/passwordSettings
 import { passwordSettingsInputs } from '../../../testData/passwordSettings';
 import { userDeleteByEmail } from '../../../helpers/axios/userDeleteByEmail';
 
-describe('PASSWORD (SETTINGS) PAGE', () => {
+describe('USER. SETTINGS. PASSWORD PAGE', () => {
   before('before all describes => register', () => {
     RegisterPage.open();
     RegisterPage.registerUser(newUser);
@@ -22,62 +22,62 @@ describe('PASSWORD (SETTINGS) PAGE', () => {
       browser.refresh();
     });
 
-    it('TC-176 "Old password" field should accept current password', function () {
+    it('TC-176 "Old password" field should accept current password', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(newUser.password);
       expect(SettingsPasswordPage.oldPasswordInput.getValue()).eq(newUser.password);
     });
 
-    it('TC-177 "Old password" field should accept password with digits', function () {
+    it('TC-177 "Old password" field should accept password with digits', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(passwordSettingsInputs.passwordDigits);
       expect(SettingsPasswordPage.oldPasswordInput.getValue()).eq(passwordSettingsInputs.passwordDigits);
     });
 
-    it('TC-178 "Old password" field should accept password with Upper and Lower case letters', function () {
+    it('TC-178 "Old password" field should accept password with Upper and Lower case letters', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(passwordSettingsInputs.passwordLetters);
       expect(SettingsPasswordPage.oldPasswordInput.getValue()).eq(passwordSettingsInputs.passwordLetters);
     });
 
-    it('TC-179 "Old password" field should accept password Special Chars', function () {
+    it('TC-179 "Old password" field should accept password Special Chars', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(passwordSettingsInputs.passwordSpecialChars);
       expect(SettingsPasswordPage.oldPasswordInput.getValue()).eq(passwordSettingsInputs.passwordSpecialChars);
     });
 
-    it('TC-180 "New password" field should accept password with min length', function () {
+    it('TC-180 "New password" field should accept password with min length', () => {
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordMin);
       expect(SettingsPasswordPage.newPasswordInput.getValue()).eq(passwordSettingsInputs.passwordMin);
     });
 
-    it('TC-181 "New password" field should accept password with digits', function () {
+    it('TC-181 "New password" field should accept password with digits', () => {
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordDigits);
       expect(SettingsPasswordPage.newPasswordInput.getValue()).eq(passwordSettingsInputs.passwordDigits);
     });
 
-    it('TC-182 "New password" field should accept password with Upper and Lower case letters', function () {
+    it('TC-182 "New password" field should accept password with Upper and Lower case letters', () => {
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordLetters);
       expect(SettingsPasswordPage.newPasswordInput.getValue()).eq(passwordSettingsInputs.passwordLetters);
     });
 
-    it('TC-183 "New password" field should accept password with special chars', function () {
+    it('TC-183 "New password" field should accept password with special chars', () => {
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordSpecialChars);
       expect(SettingsPasswordPage.newPasswordInput.getValue()).eq(passwordSettingsInputs.passwordSpecialChars);
     });
 
-    it('TC-184 "Confirm new password" field should accept password with min length', function () {
+    it('TC-184 "Confirm new password" field should accept password with min length', () => {
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordMin);
       expect(SettingsPasswordPage.confirmNewPasswordInput.getValue()).eq(passwordSettingsInputs.passwordMin);
     });
 
-    it('TC-185 "Confirm new password" field should accept password with digits', function () {
+    it('TC-185 "Confirm new password" field should accept password with digits', () => {
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordDigits);
       expect(SettingsPasswordPage.confirmNewPasswordInput.getValue()).eq(passwordSettingsInputs.passwordDigits);
     });
 
-    it('TC-186 "Confirm new password" field should accept password with Upper and Lower case letters', function () {
+    it('TC-186 "Confirm new password" field should accept password with Upper and Lower case letters', () => {
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordLetters);
       expect(SettingsPasswordPage.confirmNewPasswordInput.getValue()).eq(passwordSettingsInputs.passwordLetters);
     });
 
-    it('TC-187 "Confirm new password" field should accept password with special chars', function () {
+    it('TC-187 "Confirm new password" field should accept password with special chars', () => {
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordSpecialChars);
       expect(SettingsPasswordPage.confirmNewPasswordInput.getValue()).eq(passwordSettingsInputs.passwordSpecialChars);
     });
@@ -88,36 +88,36 @@ describe('PASSWORD (SETTINGS) PAGE', () => {
       browser.refresh();
     });
 
-    it('TC-188 password is invisible by default in "Old password" field ', function () {
+    it('TC-188 password is invisible by default in "Old password" field ', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       expect(SettingsPasswordPage.oldPasswordInput.getAttribute('type')).eq(passwordSettingsTestResult.typeInvisiblePassword);
     });
 
-    it('TC-189 password become visible by clicking on Eye icon in "Old password" field ', function () {
+    it('TC-189 password become visible by clicking on Eye icon in "Old password" field ', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       SettingsPasswordPage.oldPasswordEyeIcon.click();
       expect(SettingsPasswordPage.oldPasswordInput.getAttribute('type')).eq(passwordSettingsTestResult.typeVisiblePassword);
     });
 
-    it('TC-190 password is invisible by default in "New password" field ', function () {
+    it('TC-190 password is invisible by default in "New password" field ', () => {
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       expect(SettingsPasswordPage.newPasswordInput.getAttribute('type')).eq(passwordSettingsTestResult.typeInvisiblePassword);
     });
 
-    it('TC-191 password become visible by clicking on Eye icon in "New password" field ', function () {
+    it('TC-191 password become visible by clicking on Eye icon in "New password" field ', () => {
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       SettingsPasswordPage.newPasswordEyeIcon.click();
       expect(SettingsPasswordPage.newPasswordInput.getAttribute('type')).eq(passwordSettingsTestResult.typeVisiblePassword);
     });
 
-    it('TC-192 password is invisible by default in "Confirm new password" field ', function () {
+    it('TC-192 password is invisible by default in "Confirm new password" field ', () => {
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       expect(SettingsPasswordPage.confirmNewPasswordInput.getAttribute('type')).eq(
         passwordSettingsTestResult.typeInvisiblePassword,
       );
     });
 
-    it('TC-193 password become visible by clicking on Eye icon in "Confirm new password" field ', function () {
+    it('TC-193 password become visible by clicking on Eye icon in "Confirm new password" field ', () => {
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       SettingsPasswordPage.confirmNewPasswordEyeIcon.click();
       expect(SettingsPasswordPage.confirmNewPasswordInput.getAttribute('type')).eq(
@@ -131,29 +131,29 @@ describe('PASSWORD (SETTINGS) PAGE', () => {
       browser.refresh();
     });
 
-    it('TC-194 "Update Password" button is disable by default', function () {
+    it('TC-194 "Update Password" button is disable by default', () => {
       expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).false;
     });
 
-    it('TC-195 "Update Password" button is disable when "Old password field" is empty', function () {
+    it('TC-195 "Update Password" button is disable when "Old password field" is empty', () => {
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).false;
     });
 
-    it('TC-196 "Update Password" button is disable when "New password field" is empty', function () {
+    it('TC-196 "Update Password" button is disable when "New password field" is empty', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(newUser.password);
       SettingsPasswordPage.confirmNewPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).false;
     });
 
-    it('TC-197 "Update Password" button is disable when "Confirm new password field" is empty', function () {
+    it('TC-197 "Update Password" button is disable when "Confirm new password field" is empty', () => {
       SettingsPasswordPage.oldPasswordInput.setValue(newUser.password);
       SettingsPasswordPage.newPasswordInput.setValue(passwordSettingsInputs.passwordNew);
       expect(SettingsPasswordPage.updatePasswordButton.isEnabled()).false;
     });
 
-    it('TC-198 "Update Password" button is clickable when all fields are filled', function () {
+    it('TC-198 "Update Password" button is clickable when all fields are filled', () => {
       SettingsPasswordPage.updatePasswordNegative(
         newUser.password,
         passwordSettingsInputs.passwordNew,
@@ -164,9 +164,8 @@ describe('PASSWORD (SETTINGS) PAGE', () => {
   });
 });
 
-after ('Should delete a user', async () => {
+after('Should delete a user', async () => {
   const res = await userDeleteByEmail(newUser.email);
   console.log('delete ' + res.success);
   expect(res.success).eq(true);
 });
-

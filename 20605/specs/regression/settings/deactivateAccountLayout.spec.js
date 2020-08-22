@@ -13,36 +13,36 @@ before(() => {
   DeactivateAccountPage.deactivateAccountTab.click();
 });
 
-describe('ELEMENTS ARE PRESENT AND HAVE CORRECT TEXT', function () {
-  it('TC-328 deactivateAccountLink should be displayed', function () {
+describe('ELEMENTS ARE PRESENT AND HAVE CORRECT TEXT', () => {
+  it('TC-328 deactivateAccountLink should be displayed', () => {
     expect(DeactivateAccountPage.deactivateAccountTab.isDisplayed());
   });
 
-  it('TC-329 deactivateAccountLink has correct text', function () {
+  it('TC-329 deactivateAccountLink has correct text', () => {
     expect(DeactivateAccountPage.deactivateAccountTab.getText()).eq(deactivateSettings.deactivateAccountTab);
   });
 
-  it('TC-330 header should be displayed', function () {
+  it('TC-330 header should be displayed', () => {
     expect(DeactivateAccountPage.accountDeactivationHeader.isDisplayed());
   });
 
-  it('TC-331 header has correct text', function () {
+  it('TC-331 header has correct text', () => {
     expect(DeactivateAccountPage.accountDeactivationHeader.getText()).eq(deactivateSettings.headerH2);
   });
 
-  it('TC-334 deactivateBtn should be displayed', function () {
+  it('TC-334 deactivateBtn should be displayed', () => {
     expect(DeactivateAccountPage.deactivateBtn.isDisplayed());
   });
 
-  it('TC-335 deactivateBtn has correct text', function () {
+  it('TC-335 deactivateBtn has correct text', () => {
     expect(DeactivateAccountPage.deactivateBtn.getText()).eq(deactivateSettings.deactivateBtn);
   });
 
-  it('TC-332 textDescription should be displayed', function () {
+  it('TC-332 textDescription should be displayed', () => {
     expect(DeactivateAccountPage.textDescription.isDisplayed());
   });
 
-  it('TC-333 textDescription has correct text', function () {
+  it('TC-333 textDescription has correct text', () => {
     expect(DeactivateAccountPage.textDescription.getText()).eq(deactivateSettings.textDescription);
   });
 });

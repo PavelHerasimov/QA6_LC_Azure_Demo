@@ -18,12 +18,12 @@ before(() => {
 });
 
 describe(' CHANGE PASSWORD FOR NEW USER ', () => {
-  it('TC- User stays logged in after password has been changed', function () {
+  it('TC- User stays logged in after password has been changed', () => {
     SettingsPasswordPage.updatePassword(user.tempUser.password, user.tempUser.newPassword);
     expect(ProfilePage.dropDownUserMenu.isDisplayed()).true;
   });
 
-  it('TC-  User can log with the new password', function () {
+  it('TC-  User can log with the new password', () => {
     ProfilePage.logout();
     LoginPage.login(user.tempUser.email, user.tempUser.newPassword);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.new);

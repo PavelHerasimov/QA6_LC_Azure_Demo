@@ -1,5 +1,5 @@
 const resetPasswordPage = {
-  txtHeader: "Reset password"
-}
+  txtHeader: 'Reset password',
+};
 
-export {resetPasswordPage};
+export { resetPasswordPage };

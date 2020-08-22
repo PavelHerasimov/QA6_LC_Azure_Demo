@@ -11,99 +11,99 @@ describe('LOGIN', () => {
     expect(LoginPage.header.getText()).eq(textLogin.headerLogin);
   });
 
-  it('TC-060 should verify link home page is present', function () {
+  it('TC-060 should verify link home page is present', () => {
     expect(TopMenuPage.homePageLink.isDisplayed()).eq(true);
   });
 
-  it('TC-061 should  verify link home page is clickable', function () {
+  it('TC-061 should  verify link home page is clickable', () => {
     expect(TopMenuPage.homePageLink.isClickable()).eq(true);
   });
 
-  it('TC-062 should verify link home page has right name', function () {
+  it('TC-062 should verify link home page has right name', () => {
     expect(TopMenuPage.homePageLink.getText()).eq(textLogin.linkLocalCoding);
   });
 
-  it('TC-063 should verify icon mail is present', function () {
+  it('TC-063 should verify icon mail is present', () => {
     expect(LoginPage.mailIcon.isDisplayed()).eq(true);
   });
 
-  it('TC-064 should verify input email field is present', function () {
+  it('TC-064 should verify input email field is present', () => {
     expect(LoginPage.inputUsername.isDisplayed()).eq(true);
   });
 
-  it('TC-065 should verify input email field has right name', function () {
+  it('TC-065 should verify input email field has right name', () => {
     expect(LoginPage.inputUsername.getAttribute('placeholder')).eq(textLogin.placeholderEmail);
   });
 
-  it('TC-066 should verify icon lock is present', function () {
+  it('TC-066 should verify icon lock is present', () => {
     expect(LoginPage.lockIcon.isDisplayed()).eq(true);
   });
 
-  it('TC-067 should verify input password field is present', function () {
+  it('TC-067 should verify input password field is present', () => {
     expect(LoginPage.inputPassword.isDisplayed()).eq(true);
   });
 
-  it('TC-068 should verify input password field has right name', function () {
+  it('TC-068 should verify input password field has right name', () => {
     expect(LoginPage.inputPassword.getAttribute('placeholder')).eq(textLogin.placeholderPassword);
   });
 
-  it('TC-069 should verify login button is present', function () {
+  it('TC-069 should verify login button is present', () => {
     expect(LoginPage.loginBtn.isDisplayed()).eq(true);
   });
 
-  it('TC-070 should verify login button is non-clickable', function () {
+  it('TC-070 should verify login button is non-clickable', () => {
     expect(LoginPage.loginBtn.isClickable()).eq(false);
   });
 
-  it('TC-071 should verify login button has right name', function () {
+  it('TC-071 should verify login button has right name', () => {
     expect(LoginPage.loginBtn.getText()).eq(textLogin.loginBtn);
   });
 
-  it('TC-072 should verify register link is present', function () {
+  it('TC-072 should verify register link is present', () => {
     expect(LoginPage.registerLink.isDisplayed()).eq(true);
   });
 
-  it('TC-073 should verify register link is clickable', function () {
+  it('TC-073 should verify register link is clickable', () => {
     expect(LoginPage.registerLink.isClickable()).eq(true);
   });
 
-  it('TC-074 should verify register link has right name', function () {
+  it('TC-074 should verify register link has right name', () => {
     expect(LoginPage.registerLink.getText()).eq(textLogin.linkCreateAccount);
   });
 
-  it('TC-075 should verify reset link is present', function () {
+  it('TC-075 should verify reset link is present', () => {
     expect(LoginPage.resetLink.isDisplayed()).eq(true);
   });
 
-  it('TC-076 should verify reset link is clickable', function () {
+  it('TC-076 should verify reset link is clickable', () => {
     expect(LoginPage.resetLink.isClickable()).eq(true);
   });
 
-  it('TC-077 should verify reset link has right name', function () {
+  it('TC-077 should verify reset link has right name', () => {
     expect(LoginPage.resetLink.getText()).eq(textLogin.linkResetPassword);
   });
 
-  it('TC-078 should Google login link is present', function () {
+  it('TC-078 should Google login link is present', () => {
     expect(LoginPage.loginGoogleBtn.isDisplayed()).eq(true);
   });
 
-  it('TC-079 should Google login link is clickable', function () {
+  it('TC-079 should Google login link is clickable', () => {
     expect(LoginPage.loginGoogleBtn.isClickable()).eq(true);
   });
 
-  it('TC-080 should Google login link has right name', function () {
+  it('TC-080 should Google login link has right name', () => {
     expect(LoginPage.loginGoogleBtn.getText()).eq(textLogin.linkBtnGoogle);
   });
 
-  it('TC-081 should Facebook login link is present', function () {
+  it('TC-081 should Facebook login link is present', () => {
     expect(LoginPage.loginFacebookBtn.isDisplayed()).eq(true);
   });
 
-  it('TC-082 should Facebook login link is clickable', function () {
+  it('TC-082 should Facebook login link is clickable', () => {
     expect(LoginPage.loginFacebookBtn.isClickable()).eq(true);
   });
 
-  it('TC-083 should Facebook login link has right name', function () {
+  it('TC-083 should Facebook login link has right name', () => {
     expect(LoginPage.loginFacebookBtn.getText()).eq(textLogin.linkBtnFacebook);
   });
 });

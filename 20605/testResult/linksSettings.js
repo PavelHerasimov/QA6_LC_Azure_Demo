@@ -11,7 +11,6 @@ const linksSettings = {
   facebookData: 'https://www.facebook.com/groups/185538711998736/',
   gitHubData: 'https://github.com/bogutski',
   codewarsData: 'https://www.codewars.com/users/Viktor%20Bogutskii',
-
 };
 
 export { linksSettings };

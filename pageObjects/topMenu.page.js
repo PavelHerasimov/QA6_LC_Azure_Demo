@@ -61,7 +61,7 @@ class TopMenuPage extends BasePage {
     return $('.ml-auto img');
   }
 
- get achievementsLink() {
+  get achievementsLink() {
     return $('.ml-auto span');
   }
 

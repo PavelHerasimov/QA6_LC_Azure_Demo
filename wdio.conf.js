@@ -9,7 +9,7 @@ exports.config = {
 
   suites: {
     20601: ['./20601/specs/**/*.js'],
-    20602: ['./20602/specs/**/*.js'],
+    20602: ['./regression/user/**/*.spec.js'],
     20603: ['./20603/specs/**/*.js'],
     20605: ['./20605/specs/**/*.js'],
     20606: ['./20606/specs/**/*.js'],
@@ -130,7 +130,7 @@ exports.config = {
   /**
    * Function to be executed before a test (in Mocha/Jasmine) starts.
    */
-  beforeTest: function () {
+  beforeTest: () => {
     const chai = require('chai');
     global.expect = chai.expect;
   },

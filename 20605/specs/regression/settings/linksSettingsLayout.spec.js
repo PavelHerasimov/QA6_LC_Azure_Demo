@@ -13,60 +13,60 @@ before(() => {
   LinksPage.linksTab.click();
 });
 
-describe('TC-200 LINKS ARE DISPLAYED AND HAVE CORRECT TEXT', function () {
-  it('LinksTab should be displayed', function () {
+describe('TC-200 LINKS ARE DISPLAYED AND HAVE CORRECT TEXT', () => {
+  it('LinksTab should be displayed', () => {
     expect(LinksPage.linksTab.isDisplayed());
   });
 
-  it('TC-201 LinksTab has correct text', function () {
+  it('TC-201 LinksTab has correct text', () => {
     expect(LinksPage.linksTab.getText()).eq(linksSettings.linksTab);
   });
 
-  it('TC-202 ResumeLabel should be displayed', function () {
+  it('TC-202 ResumeLabel should be displayed', () => {
     expect(LinksPage.resumeLabel.isDisplayed());
   });
 
-  it('TC-203 ResumeLabel has correct text', function () {
+  it('TC-203 ResumeLabel has correct text', () => {
     expect(LinksPage.resumeLabel.getText()).eq(linksSettings.resumeLabel);
   });
 
-  it('TC-204 LinkedinLabel should be displayed', function () {
+  it('TC-204 LinkedinLabel should be displayed', () => {
     expect(LinksPage.linkedInLabel.isDisplayed());
   });
 
-  it('TC-205 LinkedinLabel has correct text', function () {
+  it('TC-205 LinkedinLabel has correct text', () => {
     expect(LinksPage.linkedInLabel.getText()).eq(linksSettings.linkedInLabel);
   });
 
-  it('TC-206 FacebookLabel should be displayed', function () {
+  it('TC-206 FacebookLabel should be displayed', () => {
     expect(LinksPage.facebookLabel.isDisplayed());
   });
 
-  it('TC-207 FacebookLabel has correct text', function () {
+  it('TC-207 FacebookLabel has correct text', () => {
     expect(LinksPage.facebookLabel.getText()).eq(linksSettings.facebookLabel);
   });
 
-  it('TC-208 GitHubLabel should be displayed', function () {
+  it('TC-208 GitHubLabel should be displayed', () => {
     expect(LinksPage.gitHubLabel.isDisplayed());
   });
 
-  it('TC-209 GitHubLabel has correct text', function () {
+  it('TC-209 GitHubLabel has correct text', () => {
     expect(LinksPage.gitHubLabel.getText()).eq(linksSettings.gitHubLabel);
   });
 
-  it('TC-210 CodewarsLabel should be displayed', function () {
+  it('TC-210 CodewarsLabel should be displayed', () => {
     expect(LinksPage.codewarsLabel.isDisplayed());
   });
 
-  it('TC-211 CodewarsLabel has correct text', function () {
+  it('TC-211 CodewarsLabel has correct text', () => {
     expect(LinksPage.codewarsLabel.getText()).eq(linksSettings.codewarsLabel);
   });
 
-  it('TC-212 SaveBtn should be displayed', function () {
+  it('TC-212 SaveBtn should be displayed', () => {
     expect(LinksPage.saveLinksBtn.isDisplayed());
   });
 
-  it('TC-213 SaveBtn has correct text', function () {
+  it('TC-213 SaveBtn has correct text', () => {
     expect(LinksPage.saveLinksBtn.getText()).eq(linksSettings.saveLinkBtn);
   });
 });

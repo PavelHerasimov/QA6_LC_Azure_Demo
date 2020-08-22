@@ -18,8 +18,7 @@ describe('REGRESSION USER REGISTER', () => {
     });
 
     it('REG3 First Name Input Field should have correct placeholder', () => {
-      expect(RegisterPage.firstNameInput.getAttribute('placeholder'))
-        .eq(expected.newUser.firstNamePlaceholder);
+      expect(RegisterPage.firstNameInput.getAttribute('placeholder')).eq(expected.newUser.firstNamePlaceholder);
     });
 
     it('REG4 Should have Last Name Input Field present on the page', () => {
@@ -27,8 +26,7 @@ describe('REGRESSION USER REGISTER', () => {
     });
 
     it('REG5 Last Name Input Field should have correct placeholder', () => {
-      expect(RegisterPage.lastNameInput.getAttribute('placeholder'))
-        .eq(expected.newUser.lastNamePlaceholder);
+      expect(RegisterPage.lastNameInput.getAttribute('placeholder')).eq(expected.newUser.lastNamePlaceholder);
     });
 
     it('REG6 Should have Email Input Field present on the page', () => {
@@ -36,8 +34,7 @@ describe('REGRESSION USER REGISTER', () => {
     });
 
     it('REG7 Email Input Field should have correct placeholder', () => {
-      expect(RegisterPage.email.getAttribute('placeholder'))
-        .eq(expected.newUser.emailPlaceholder);
+      expect(RegisterPage.email.getAttribute('placeholder')).eq(expected.newUser.emailPlaceholder);
     });
 
     it('REG8 Should have Password Input Field present on the page', () => {
@@ -45,8 +42,7 @@ describe('REGRESSION USER REGISTER', () => {
     });
 
     it('REG9 Password Input Field should have correct placeholder', () => {
-      expect(RegisterPage.password.getAttribute('placeholder'))
-        .eq(expected.newUser.passwordPlaceholder);
+      expect(RegisterPage.password.getAttribute('placeholder')).eq(expected.newUser.passwordPlaceholder);
     });
 
     it('REG10 Should have agreementCheckBox present on the page', () => {

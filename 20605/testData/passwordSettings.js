@@ -13,7 +13,6 @@ const passwordSettingsNegative = {
   newPassword: 'smile963',
   confirmNewWrongPassword: 'smile96',
   newSmallPassword: '1234',
-
-}
+};
 
 export { passwordSettingsInputs, passwordSettingsNegative };

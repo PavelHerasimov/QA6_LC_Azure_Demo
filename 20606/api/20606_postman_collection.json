@@ -17,13 +17,13 @@
 							"script": {
 								"id": "ca72c8e4-0622-4499-9317-cca96cd2d57c",
 								"exec": [
-									"pm.test(\"Response should be okay to process\", function () {",
+									"pm.test(\"Response should be okay to process\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody();",
 									"      pm.response.to.not.have.jsonBody('error');",
 									"  });",
 									"",
-									"pm.test(\"Authentication is successful\", function () {",
+									"pm.test(\"Authentication is successful\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Auth success\");",
 									"});",
 									"",
@@ -88,11 +88,11 @@
 							"script": {
 								"id": "25099250-8c83-4ae7-b564-de231c1d092b",
 								"exec": [
-									"pm.test(\"Status code is 201\", function () {",
+									"pm.test(\"Status code is 201\", () => {",
 									"    pm.response.to.be.success;",
 									"});",
 									"",
-									"pm.test(\"Response is not an error\", function () {",
+									"pm.test(\"Response is not an error\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody('success', true);",
 									"      pm.response.to.not.have.jsonBody('error');",
@@ -159,13 +159,13 @@
 									"const body = pm.response.json();",
 									"pm.environment.set(\"user_id\", body.payload._id);",
 									"",
-									"pm.test(\"Response is not an error\", function () {",
+									"pm.test(\"Response is not an error\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody('success', true);",
 									"      pm.response.to.not.have.jsonBody('error');",
 									"});",
 									"",
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.be.ok;",
 									"});",
 									"",
@@ -238,17 +238,17 @@
 							"script": {
 								"id": "7c7fe35d-b234-4942-a347-d73f14a1dd1d",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.be.badRequest;",
 									"});",
 									"",
-									"pm.test(\"Response has error message and correct fields\", function () {",
+									"pm.test(\"Response has error message and correct fields\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Wrong password format\");",
 									"    pm.response.to.have.jsonBody('success', false);",
 									"    pm.response.to.have.jsonBody('fail', true);",
 									"});",
 									"",
-									"pm.test(\"Response time is less than 500ms\", function () {",
+									"pm.test(\"Response time is less than 500ms\", () => {",
 									"    pm.expect(pm.response.responseTime).to.be.below(500);",
 									"});",
 									""
@@ -306,11 +306,11 @@
 							"script": {
 								"id": "9f0e960f-5852-4703-9ce2-49bdf2ad80d8",
 								"exec": [
-									"pm.test(\"Status code is 404\", function () {",
+									"pm.test(\"Status code is 404\", () => {",
 									"    pm.response.to.be.notFound;",
 									"});",
 									"",
-									"pm.test(\"Response contains error message and correct fields\", function () {",
+									"pm.test(\"Response contains error message and correct fields\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"User was not created\");",
 									"    pm.response.to.have.jsonBody('success', false);",
 									"    pm.response.to.have.jsonBody('fail', true);",
@@ -370,17 +370,17 @@
 							"script": {
 								"id": "4aa522d6-c048-4298-b7a5-80c824b2b08b",
 								"exec": [
-									"pm.test(\"Status code is 409\", function () {",
+									"pm.test(\"Status code is 409\", () => {",
 									"    pm.response.to.have.status(409);",
 									"});",
 									"",
-									"pm.test(\"Check error message, success, and fail fields\", function () {",
+									"pm.test(\"Check error message, success, and fail fields\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"User with this e-mail exists\");",
 									"    pm.response.to.have.jsonBody('success', false);",
 									"    pm.response.to.have.jsonBody('fail', true);",
 									"});",
 									"",
-									"pm.test(\"Response time is less than 500ms\", function () {",
+									"pm.test(\"Response time is less than 500ms\", () => {",
 									"    pm.expect(pm.response.responseTime).to.be.below(500);",
 									"});"
 								],
@@ -448,13 +448,13 @@
 									"pm.environment.set(\"user_token\", body.token);",
 									"pm.environment.set(\"user_id\", body.userId);",
 									"",
-									"pm.test(\"Response should be okay to process\", function () {",
+									"pm.test(\"Response should be okay to process\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody();",
 									"      pm.response.to.not.have.jsonBody('error');",
 									"  });",
 									"",
-									"pm.test(\"Authentication is successful\", function () {",
+									"pm.test(\"Authentication is successful\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Auth success\");",
 									"});",
 									"",
@@ -513,7 +513,7 @@
 							"script": {
 								"id": "6aa46bea-e34a-433b-873d-ff8b85c1c1c2",
 								"exec": [
-									"pm.test(\"Status code is 401\", function () {",
+									"pm.test(\"Status code is 401\", () => {",
 									"    pm.response.to.be.unauthorized;",
 									"});"
 								],
@@ -567,7 +567,7 @@
 							"script": {
 								"id": "1924c1c6-e672-4911-bbfb-64d9be28a9ba",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});"
 								],
@@ -629,7 +629,7 @@
 							"script": {
 								"id": "8ff9945e-3fa3-4052-ba21-b5640ef88340",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});"
 								],
@@ -685,11 +685,11 @@
 							"script": {
 								"id": "c01dcb6a-0a70-4b10-8115-6e8048e7d684",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Permission denied\");",
 									"});"
 								],
@@ -757,11 +757,11 @@
 							"script": {
 								"id": "e2e4730e-c05d-4ee4-9e60-df59c0985260",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Check mail for reset password link\");",
 									"});"
 								],
@@ -816,11 +816,11 @@
 							"script": {
 								"id": "e63e93be-bad5-4acd-928f-2f4bf83d88b7",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"User not found\");",
 									"});"
 								],
@@ -885,11 +885,11 @@
 									"",
 									"pm.environment.set(\"user_hash\", body.payload.hash);",
 									"",
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"User get hash. Success\");",
 									"});"
 								],
@@ -950,11 +950,11 @@
 									"",
 									"pm.environment.set(\"hash\", body.payload.hash);",
 									"",
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Permission denied\");",
 									"});"
 								],
@@ -1017,11 +1017,11 @@
 							"script": {
 								"id": "572a9236-bab5-46bb-a948-d5b58ad20f0f",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Valid link\");",
 									"});"
 								],
@@ -1076,11 +1076,11 @@
 							"script": {
 								"id": "ae05f5e4-fc47-4151-99e3-28827c2b7f2a",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Something went wrong. If it looks critical, please send a screenshot to support@pasv.us\");",
 									"});"
 								],
@@ -1136,11 +1136,11 @@
 							"script": {
 								"id": "0af0756b-b94b-4c9c-9af9-0d8e5c562bd5",
 								"exec": [
-									"pm.test(\"Status code is 404\", function () {",
+									"pm.test(\"Status code is 404\", () => {",
 									"    pm.response.to.have.status(404);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Invalid link\");",
 									"});"
 								],
@@ -1202,11 +1202,11 @@
 							"script": {
 								"id": "7261f6bd-e9cf-4218-a4fe-bb5aa5c57870",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Your password has been changed successfully\");",
 									"});"
 								],
@@ -1262,11 +1262,11 @@
 							"script": {
 								"id": "6e5ebe89-bd69-469c-a059-0fa350b6a7d3",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Invalid link\");",
 									"});"
 								],
@@ -1323,11 +1323,11 @@
 							"script": {
 								"id": "96cfe0b4-de54-4392-b2cf-6fc76dc533ca",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Change password error\");",
 									"});"
 								],
@@ -1383,11 +1383,11 @@
 							"script": {
 								"id": "38593b80-fcfc-4320-b8b4-d9574676a870",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Change password error\");",
 									"});"
 								],
@@ -1443,11 +1443,11 @@
 							"script": {
 								"id": "bf7fc879-86cc-483d-a744-1bbeb5f7d1d0",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Something went wrong. If it looks critical, please send a screenshot to support@pasv.us\");",
 									"});"
 								],
@@ -1511,11 +1511,11 @@
 								"exec": [
 									"var _ = require('lodash');",
 									"",
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.be.success;",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"User deleted\");",
 									"});",
 									"",
@@ -1578,11 +1578,11 @@
 							"script": {
 								"id": "75370b24-40b3-4bbc-8a2b-6a0719b5512b",
 								"exec": [
-									"pm.test(\"Status code is 404\", function () {",
+									"pm.test(\"Status code is 404\", () => {",
 									"    pm.response.to.have.status(404);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"API not found\");",
 									"});"
 								],
@@ -1640,11 +1640,11 @@
 							"script": {
 								"id": "a7aa332b-4aaa-45f5-a903-c13ce44a9361",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Get all users. Success\");",
 									"});",
 									"",
@@ -1752,12 +1752,12 @@
 							"script": {
 								"id": "fadfe9fd-da09-4cfc-be4f-fc8356ca7a66",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Auth failed\");",
 									"});"
 								],
@@ -1822,12 +1822,12 @@
 							"script": {
 								"id": "d866fe38-8b46-4ed0-a381-db468adf9beb",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
+									"pm.test(\"Status code is 400\", () => {",
 									"    pm.response.to.have.status(400);",
 									"});",
 									"",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Auth failed\");",
 									"});"
 								],
@@ -1893,12 +1893,12 @@
 							"script": {
 								"id": "e64047d0-58ea-4dc5-af47-8340471a83f5",
 								"exec": [
-									"pm.test(\"Status code is 404\", function () {",
+									"pm.test(\"Status code is 404\", () => {",
 									"    pm.response.to.have.status(404);",
 									"});",
 									"",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"API not found\");",
 									"});"
 								],
@@ -1967,13 +1967,13 @@
 							"script": {
 								"id": "97425efe-cd93-4fa7-b264-bd48f962d05b",
 								"exec": [
-									"pm.test(\"Response should be okay to process\", function () {",
+									"pm.test(\"Response should be okay to process\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody();",
 									"      pm.response.to.not.have.jsonBody('error');",
 									"  });",
 									"",
-									"pm.test(\"Authentication is successful\", function () {",
+									"pm.test(\"Authentication is successful\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Auth success\");",
 									"});",
 									"",
@@ -2035,11 +2035,11 @@
 							"script": {
 								"id": "ff694c04-a867-4c82-a2e1-0c29c1689525",
 								"exec": [
-									"pm.test(\"Status code is 201\", function () {",
+									"pm.test(\"Status code is 201\", () => {",
 									"    pm.response.to.be.success;",
 									"});",
 									"",
-									"pm.test(\"Response is not an error\", function () {",
+									"pm.test(\"Response is not an error\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody('success', true);",
 									"      pm.response.to.not.have.jsonBody('error');",
@@ -2106,13 +2106,13 @@
 									"const body = pm.response.json();",
 									"pm.environment.set(\"user_id\", body.payload._id);",
 									"",
-									"pm.test(\"Response is not an error\", function () {",
+									"pm.test(\"Response is not an error\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody('success', true);",
 									"      pm.response.to.not.have.jsonBody('error');",
 									"});",
 									"",
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.be.ok;",
 									"});",
 									"",
@@ -2185,11 +2185,11 @@
 							"script": {
 								"id": "c0398f33-814a-4ac8-af56-a2a4f67a0ecc",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Check mail for reset password link\");",
 									"});"
 								],
@@ -2248,11 +2248,11 @@
 									"",
 									"pm.environment.set(\"user_hash\", body.payload.hash);",
 									"",
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"User get hash. Success\");",
 									"});"
 								],
@@ -2309,11 +2309,11 @@
 							"script": {
 								"id": "98a85558-ecdd-4c1e-a2db-6f0b22395ec3",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Valid link\");",
 									"});"
 								],
@@ -2368,11 +2368,11 @@
 							"script": {
 								"id": "ae31496c-bdd7-492f-b198-c1f9e81c6820",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
+									"pm.test(\"Status code is 200\", () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Body matches string\", function () {",
+									"pm.test(\"Body matches string\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Your password has been changed successfully\");",
 									"});"
 								],
@@ -2443,13 +2443,13 @@
 									"pm.environment.set(\"user_token\", body.token);",
 									"pm.environment.set(\"user_id\", body.userId);",
 									"",
-									"pm.test(\"Response should be okay to process\", function () {",
+									"pm.test(\"Response should be okay to process\", () => {",
 									"      pm.response.to.not.be.error;",
 									"      pm.response.to.have.jsonBody();",
 									"      pm.response.to.not.have.jsonBody('error');",
 									"  });",
 									"",
-									"pm.test(\"Authentication is successful\", function () {",
+									"pm.test(\"Authentication is successful\", () => {",
 									"    pm.expect(pm.response.text()).to.include(\"Auth success\");",
 									"});",
 									"",

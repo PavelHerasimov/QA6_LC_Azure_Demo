@@ -23,7 +23,7 @@
 							"\r",
 							"pm.environment.set(\"passwordUPD\", \"1234nh!\")\r",
 							"\r",
-							"pm.test(\"Status code is 201\", function () {\r",
+							"pm.test(\"Status code is 201\", () => {\r",
 							"    pm.response.to.have.status(201);\r",
 							"});"
 						],
@@ -88,7 +88,7 @@
 							"pm.environment.set(\"newUserId\", body.userId);\r",
 							"\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
@@ -141,7 +141,7 @@
 							"pm.environment.set(\"adminId\", body.userId);\r",
 							"\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -242,7 +242,7 @@
 					"script": {
 						"id": "ad4c655c-fbd9-4cd3-9af2-6340b74f2b38",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -348,11 +348,11 @@
 						"exec": [
 							"const body = pm.response.json()\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"pm.test(\"Response time is less than 5000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
 							"});\r",
 							"\r",
@@ -409,11 +409,11 @@
 						"exec": [
 							"const body = pm.response.json()\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"pm.test(\"Response time is less than 5000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
 							"});\r",
 							"\r",
@@ -980,7 +980,7 @@
 					"script": {
 						"id": "61d49046-56d7-4842-aafc-fea7c27c99e8",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1033,7 +1033,7 @@
 					"script": {
 						"id": "970eb298-e493-4d9b-afcb-33771f21a723",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1089,7 +1089,7 @@
 							"\r",
 							"pm.environment.set(\"hash\", body.payload.hash);\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1143,7 +1143,7 @@
 					"script": {
 						"id": "2502df83-dd80-4ce9-a73a-9dca75c0724f",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1196,7 +1196,7 @@
 					"script": {
 						"id": "88e06ec0-7477-4b3f-aaa8-3b0e525d7301",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1259,7 +1259,7 @@
 					"script": {
 						"id": "5e6c1e3c-883f-4156-9ef2-f3919ea5c51c",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1325,7 +1325,7 @@
 					"script": {
 						"id": "3bb90543-f59e-45ff-9919-ecf612f42bdb",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1380,7 +1380,7 @@
 					"script": {
 						"id": "4a8fdc8d-350a-43c3-bd3d-cd981cf0bdec",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1435,7 +1435,7 @@
 					"script": {
 						"id": "858c43f5-d253-482f-a73e-d7d6509247c7",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1490,7 +1490,7 @@
 					"script": {
 						"id": "b3166b21-1db2-499f-9561-7802ca7baa52",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1540,7 +1540,7 @@
 					"script": {
 						"id": "7c80559f-528c-4e33-a053-659a51427f27",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1589,7 +1589,7 @@
 					"script": {
 						"id": "f39591f1-c7ae-4cc5-b155-005e4c0ab895",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1645,7 +1645,7 @@
 					"script": {
 						"id": "b209811e-fc76-4585-80c4-5bdc400dd78e",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
@@ -1695,7 +1695,7 @@
 					"script": {
 						"id": "9f839ccb-1765-4ffd-93aa-681765954fc2",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],

@@ -38,7 +38,7 @@ describe('DAILY REPORT SMOKE', () => {
   });
 });
 describe('AXIOS', () => {
-  it('Should login as admin to get admin token', async function () {
+  it('Should login as admin to get admin token', async () => {
     const response = await axios.post(`${host}/user/login`, {
       email: user.admin.email,
       password: user.admin.password,

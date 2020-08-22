@@ -9,7 +9,7 @@ const topMenuDashboard = {
   telephonyLink: 'Telephony',
   shopLink: 'Products',
   ordersLink: 'Orders',
-  achievements: 'Achievements'
+  achievements: 'Achievements',
 };
 
-export {topMenuDashboard};
+export { topMenuDashboard };

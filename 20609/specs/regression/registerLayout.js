@@ -17,15 +17,15 @@ describe('USER REGISTER step 1', () => {
   });
 
   it('TC-011 should agreement check box is present', () => {
-    expect((RegisterPage.agreementLabel).isDisplayed()).true;
+    expect(RegisterPage.agreementLabel.isDisplayed()).true;
   });
 
   it('TC-012 should agreement check box is clickable', () => {
-    expect((RegisterPage.agreementLabel).isClickable()).true;
+    expect(RegisterPage.agreementLabel.isClickable()).true;
   });
 
   it('TC-013 should agreement check box have correct text', () => {
-    expect((RegisterPage.agreementLabel).getText()).eq(dataRegression.readTerms);
+    expect(RegisterPage.agreementLabel.getText()).eq(dataRegression.readTerms);
   });
 
   it('TC-014 should agreement check box is enabled', () => {
@@ -41,7 +41,7 @@ describe('USER REGISTER step 1', () => {
   });
 
   it('TC-017 should login link have correct text', () => {
-    expect((RegisterPage.promptLabel).getText()).eq(dataRegression.textParagraf);
+    expect(RegisterPage.promptLabel.getText()).eq(dataRegression.textParagraf);
   });
 
   it('TC-018 should  input first  name is present', () => {
@@ -123,7 +123,7 @@ describe('USER REGISTER STEP 2', () => {
   });
 
   it('TC-035 should have correct country by default', () => {
-    expect((RegisterStep2Page.countryCurrent).getAttribute('title')).eq(dataRegression.countryInput);
+    expect(RegisterStep2Page.countryCurrent.getAttribute('title')).eq(dataRegression.countryInput);
   });
 
   it('TC-036 should phone label present', () => {

@@ -1,9 +1,9 @@
-import LoginPage from "../../../pageObjects/login.page";
-import ResetPasswordPage from "../../../pageObjects/resetPassword.page";
-import {student} from "../../../testData/user";
+import LoginPage from '../../../pageObjects/login.page';
+import ResetPasswordPage from '../../../pageObjects/resetPassword.page';
+import { student } from '../../../testData/user';
 
 describe('RESET PASSWORD', () => {
-  before( () => {
+  before(() => {
     LoginPage.open();
     LoginPage.resetLink.click();
   });

@@ -1,5 +1,5 @@
 const homePage = {
-  header: "Adaptive learning platform"
-}
+  header: 'Adaptive learning platform',
+};
 
- export{homePage}
+export { homePage };

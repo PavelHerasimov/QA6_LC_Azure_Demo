@@ -2,7 +2,7 @@ import BasePage from './Base.page';
 import LoginPage from './login.page.js';
 import user from '../testData/user';
 import TopMenuPage from './topMenu.page';
-import users from '../20602/data/users';
+import users from '../regression/user/data/users';
 import ProfilePage from './profile.page';
 
 class ShippingAddressPage extends BasePage {
@@ -89,7 +89,7 @@ class ShippingAddressPage extends BasePage {
   }
 
   get shippingAddressLink() {
-    return $('[data-qa="shippingAddress"]')
+    return $('[data-qa="shippingAddress"]');
   }
 
   get countryOptions() {

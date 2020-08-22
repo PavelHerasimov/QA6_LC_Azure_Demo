@@ -7,7 +7,7 @@ import LoginPage from '../../../pageObjects/login.page';
 import expected from '../../data/expected.json';
 
 describe('NEW USER PASSWORD UPDATE', () => {
-  before(function () {
+  before(() => {
     RegisterPage.open();
     RegisterPage.registerUser(newUser);
     RegisterStep2.registerUserStep2(newUser);

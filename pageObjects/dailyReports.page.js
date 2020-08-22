@@ -1,5 +1,5 @@
 import BasePage from './Base.page';
-import randomData from '../20601/data/daily.data';
+import randomData from '../smoke/diary/daily.data';
 
 class DailyReportsPage extends BasePage {
   get createDayReportBtn() {
@@ -58,8 +58,8 @@ class DailyReportsPage extends BasePage {
     return $('.small.ml-2');
   }
 
-  get newDailyReportCreatedText () {
-    return $('.ant-row.mb-4')
+  get newDailyReportCreatedText() {
+    return $('.ant-row.mb-4');
   }
 
   get dailyReportTag() {

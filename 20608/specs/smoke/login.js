@@ -5,7 +5,7 @@ import ProfilePage from './../../../pageObjects/profile.page';
 
 describe('LOGIN AS ADMIN, LEARNER, STUDENT', () => {
   beforeEach(() => {
-    LoginPage.open()
+    LoginPage.open();
   });
 
   it('should login as Admin', () => {
@@ -25,10 +25,4 @@ describe('LOGIN AS ADMIN, LEARNER, STUDENT', () => {
     expect(ProfilePage.getLoginConfirmation()).eq(user.student.firstName + ' ' + user.student.lastName);
     ProfilePage.logout();
   });
-
-
 });
-
-
-
-

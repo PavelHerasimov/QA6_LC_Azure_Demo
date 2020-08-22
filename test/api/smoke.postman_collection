@@ -18,11 +18,11 @@
 							"pm.environment.set(\"token\", body.token);\r",
 							"pm.environment.set(\"userId\", body.userId);\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -74,11 +74,11 @@
 							"pm.environment.set(\"email\", requestBody.email);\r",
 							"pm.environment.set(\"password\", requestBody.password);\r",
 							"\r",
-							"pm.test(\"Status code is 201\", function () {\r",
+							"pm.test(\"Status code is 201\", () => {\r",
 							"    pm.response.to.have.status(201);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -134,11 +134,11 @@
 							"pm.environment.set(\"newToken\", body.token);\r",
 							"pm.environment.set(\"newUserId\", body.userId);\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -185,11 +185,11 @@
 					"script": {
 						"id": "8a3eb2bb-9808-4ba5-8dd0-c6c63a9ac606",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -242,11 +242,11 @@
 					"script": {
 						"id": "588ebb42-d16b-49a5-b813-8373dcb5b617",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -289,11 +289,11 @@
 					"script": {
 						"id": "c1dfcf7a-bb14-4b86-ba92-7294d01df26f",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -351,11 +351,11 @@
 							"\r",
 							"pm.environment.set(\"hash\", body.payload.hash);\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -409,11 +409,11 @@
 					"script": {
 						"id": "15920e64-d81a-4461-901e-bdab5975bb2c",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -467,11 +467,11 @@
 					"script": {
 						"id": "542759f7-e3d4-4258-9835-b404c8614a70",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -541,11 +541,11 @@
 							"pm.environment.set(\"newToken\", body.token);\r",
 							"pm.environment.set(\"newUserId\", body.userId);\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -592,11 +592,11 @@
 					"script": {
 						"id": "eeebd707-b7eb-4a37-9076-a94fddeefe8c",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});\r",
 							"\r",
@@ -651,11 +651,11 @@
 					"script": {
 						"id": "c7dc812c-bfb8-406d-98e0-bc59b2ebeb69",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"pm.test(\"Response time is less than 2000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});"
 						],
@@ -708,11 +708,11 @@
 					"script": {
 						"id": "e8b8c8f6-d683-4bcf-931b-c3e6d3368be0",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 200\", () => {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 5000ms\", function () {\r",
+							"pm.test(\"Response time is less than 5000ms\", () => {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
 							"});\r",
 							"\r",

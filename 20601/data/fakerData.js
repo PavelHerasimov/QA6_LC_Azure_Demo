@@ -9,9 +9,9 @@ const userFaker = {
     phone: '17775551122',
     shippingStreetAddress: faker.address.streetAddress(),
     shippingCity: faker.address.city(),
-    shippingPostalCode: faker.address.zipCode()
+    shippingPostalCode: faker.address.zipCode(),
   },
-//
+  //
   tempUser: {
     email: 'new55@qa63.us',
     password: 'newnew',
@@ -23,7 +23,7 @@ const userFaker = {
     goals: 'no goals',
     englishLevel: 'Advanced',
     countryName: 'USA',
-  }
-}
+  },
+};
 
 module.exports = userFaker;

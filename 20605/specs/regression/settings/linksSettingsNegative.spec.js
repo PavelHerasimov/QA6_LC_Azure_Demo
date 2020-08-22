@@ -15,37 +15,36 @@ before(() => {
   LinksPage.linksTab.click();
 });
 
-describe('ERROR MESSAGE APPEARS WHEN ENTERED INCORRECT LINKS', function () {
-
-  it('TC-318 verify that error message appears in Google Doc Resume Link field', function () {
+describe('ERROR MESSAGE APPEARS WHEN ENTERED INCORRECT LINKS', () => {
+  it('TC-318 verify that error message appears in Google Doc Resume Link field', () => {
     clearValue(LinksPage.resumeField);
     LinksPage.resumeField.setValue(linksSettings.gitHubData);
     LinksPage.errorMesResumeLink.isDisplayed();
     expect(LinksPage.errorMesResumeLink.getText()).eq(errorMessageLinks.invalidResumeData);
   });
 
-  it('TC-319 verify that error message appears in LinkedIn Link field', function () {
+  it('TC-319 verify that error message appears in LinkedIn Link field', () => {
     clearValue(LinksPage.linkedInField);
     LinksPage.linkedInField.setValue(linksSettings.gitHubData);
     LinksPage.errorMesLinkedInLink.isDisplayed();
     expect(LinksPage.errorMesLinkedInLink.getText()).eq(errorMessageLinks.invalidLinkedInData);
   });
 
-  it('TC-320 verify that error message appears in Facebook Link field', function () {
+  it('TC-320 verify that error message appears in Facebook Link field', () => {
     clearValue(LinksPage.facebookField);
     LinksPage.facebookField.setValue(linksSettings.gitHubData);
     LinksPage.errorMesFacebookLink.isDisplayed();
     expect(LinksPage.errorMesFacebookLink.getText()).eq(errorMessageLinks.invalidFacebookData);
   });
 
-  it('TC-321 verify that error message appears in GitHub Link field', function () {
+  it('TC-321 verify that error message appears in GitHub Link field', () => {
     clearValue(LinksPage.gitHubField);
     LinksPage.gitHubField.setValue(linksSettings.linkedInData);
     LinksPage.errorMesGitHubLink.isDisplayed();
     expect(LinksPage.errorMesGitHubLink.getText()).eq(errorMessageLinks.invalidGitHubData);
   });
 
-  it('TC-322 verify that error message appears in Codewars Link field', function () {
+  it('TC-322 verify that error message appears in Codewars Link field', () => {
     clearValue(LinksPage.codewarsField);
     LinksPage.codewarsField.setValue(linksSettings.gitHubData);
     LinksPage.errorMesCodeWarsLink.isDisplayed();

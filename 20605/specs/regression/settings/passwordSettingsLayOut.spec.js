@@ -16,47 +16,47 @@ describe('PASSWORD (SETTINGS) PAGE', () => {
   });
 
   describe('PASSWORD (SETTINGS) PAGE LAYOUT', () => {
-    it('TC-165 "Old password" field should be displayed', function () {
+    it('TC-165 "Old password" field should be displayed', () => {
       expect(SettingsPasswordPage.oldPasswordInput.isDisplayed()).true;
     });
 
-    it('TC-166 "Old password" field has label with correct text', function () {
+    it('TC-166 "Old password" field has label with correct text', () => {
       expect(SettingsPasswordPage.oldPasswordLabel.getText()).eq(passwordSettingsTestResult.oldPasswordLabel);
     });
 
-    it('TC-167 "Old password" field has Eye icon', function () {
+    it('TC-167 "Old password" field has Eye icon', () => {
       expect(SettingsPasswordPage.oldPasswordEyeIcon.isDisplayed()).true;
     });
 
-    it('TC-168 "New password" field should be displayed', function () {
+    it('TC-168 "New password" field should be displayed', () => {
       expect(SettingsPasswordPage.newPasswordInput.isDisplayed()).true;
     });
 
-    it('TC-169 "New password" field has label with correct text', function () {
+    it('TC-169 "New password" field has label with correct text', () => {
       expect(SettingsPasswordPage.newPasswordLabel.getText()).eq(passwordSettingsTestResult.newPasswordLabel);
     });
 
-    it('TC-170 "New password" field has Eye icon', function () {
+    it('TC-170 "New password" field has Eye icon', () => {
       expect(SettingsPasswordPage.newPasswordEyeIcon.isDisplayed()).true;
     });
 
-    it('TC-171 "Confirm new password" field should be displayed', function () {
+    it('TC-171 "Confirm new password" field should be displayed', () => {
       expect(SettingsPasswordPage.confirmNewPasswordInput.isDisplayed()).true;
     });
 
-    it('TC-172 "Confirm new password" field has label with correct text', function () {
+    it('TC-172 "Confirm new password" field has label with correct text', () => {
       expect(SettingsPasswordPage.confirmNewPasswordLabel.getText()).eq(passwordSettingsTestResult.confirmNewPasswordLabel);
     });
 
-    it('TC-173 "Confirm new password" field has Eye icon', function () {
+    it('TC-173 "Confirm new password" field has Eye icon', () => {
       expect(SettingsPasswordPage.confirmNewPasswordEyeIcon.isDisplayed()).true;
     });
 
-    it('TC-174 "Update password" button should be displayed', function () {
+    it('TC-174 "Update password" button should be displayed', () => {
       expect(SettingsPasswordPage.updatePasswordButton.isDisplayed()).true;
     });
 
-    it('TC-175 "Update password" button should have correct text', function () {
+    it('TC-175 "Update password" button should have correct text', () => {
       expect(SettingsPasswordPage.updatePasswordButton.getText()).eq(passwordSettingsTestResult.updatePasswordButton);
     });
   });

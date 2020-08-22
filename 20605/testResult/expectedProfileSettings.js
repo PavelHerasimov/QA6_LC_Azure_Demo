@@ -10,6 +10,6 @@ export const expectedProfileSettings = {
   countryFiled: 'Canada',
   englishLevelFieldCurrent: 'Advanced',
   englishLevelField: 'Proficient',
-  tShirtSizeFieldCurrent: "Men/Unisex - XS",
-  tShirtSizeField: 'Men/Unisex - S'
-}
+  tShirtSizeFieldCurrent: 'Men/Unisex - XS',
+  tShirtSizeField: 'Men/Unisex - S',
+};

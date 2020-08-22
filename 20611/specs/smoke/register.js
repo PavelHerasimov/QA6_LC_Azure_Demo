@@ -8,14 +8,14 @@ describe('New user registration page', () => {
     RegisterPage.open();
   });
 
-  it('TC-024 Check if user is able to move to Register Step 2 page', function () {
+  it('TC-024 Check if user is able to move to Register Step 2 page', () => {
     RegisterPage.registerUser(user);
     expect(RegisterPageStep2.headerRegisterStep2.getText()).eq(
       `Dear ${user.firstName} ${user.lastName}!\nPlease complete these fields`,
     );
   });
 
-  it('TC-025 Check if user is able to complete the registration process', function () {
+  it('TC-025 Check if user is able to complete the registration process', () => {
     RegisterPageStep2.registerUserStep2(user);
     expect(Profile.getLoginConfirmation()).eq(`${user.firstName} ${user.lastName}`);
   });

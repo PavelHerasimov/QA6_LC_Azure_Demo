@@ -4,13 +4,13 @@ import { newUser } from '../../../testData/register';
 import user from '../../../../testData/user';
 import { errorMessagesRegistration } from '../../../testResult/errorMessages';
 
-describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
+describe('REGISTER PAGE STEP-1 NEGATIVE', () => {
   beforeEach(() => {
     RegisterPage.open();
   });
 
-  describe('REGISTER BUTTON IS DISABLED FOR EMPTY REQUIRED FIELDS', function () {
-    it('TC-013 should verify that user can not register with empty First Name', function () {
+  describe('REGISTER BUTTON IS DISABLED FOR EMPTY REQUIRED FIELDS', () => {
+    it('TC-013 should verify that user can not register with empty First Name', () => {
       RegisterPage.lastNameInput.setValue(newUser.lastName);
       RegisterPage.email.setValue(newUser.email);
       RegisterPage.password.setValue(newUser.password);
@@ -18,7 +18,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       expect(RegisterPage.registerBtn.isClickable()).eq(false);
     });
 
-    it('TC-014 should verify that user can not register with empty Last Name', function () {
+    it('TC-014 should verify that user can not register with empty Last Name', () => {
       RegisterPage.firstNameInput.setValue(newUser.firstName);
       RegisterPage.email.setValue(newUser.email);
       RegisterPage.password.setValue(newUser.password);
@@ -26,7 +26,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       expect(RegisterPage.registerBtn.isClickable()).eq(false);
     });
 
-    it('TC-015 should verify that user can not register with empty Email', function () {
+    it('TC-015 should verify that user can not register with empty Email', () => {
       RegisterPage.firstNameInput.setValue(newUser.firstName);
       RegisterPage.lastNameInput.setValue(newUser.lastName);
       RegisterPage.password.setValue(newUser.password);
@@ -34,7 +34,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       expect(RegisterPage.registerBtn.isClickable()).eq(false);
     });
 
-    it('TC-016 should verify that user can not register with empty Password', function () {
+    it('TC-016 should verify that user can not register with empty Password', () => {
       RegisterPage.firstNameInput.setValue(newUser.firstName);
       RegisterPage.lastNameInput.setValue(newUser.lastName);
       RegisterPage.email.setValue(newUser.email);
@@ -42,7 +42,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       expect(RegisterPage.registerBtn.isClickable()).eq(false);
     });
 
-    it('TC-017 should verify that user can not register with unchecked Terms and agreements checkbox\n', function () {
+    it('TC-017 should verify that user can not register with unchecked Terms and agreements checkbox\n', () => {
       RegisterPage.firstNameInput.setValue(newUser.firstName);
       RegisterPage.lastNameInput.setValue(newUser.lastName);
       RegisterPage.email.setValue(newUser.email);
@@ -51,8 +51,8 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
     });
   });
 
-  describe('ENTERING INCORRECT DATA', function () {
-    it('TC-118 should verify that user can not register with invalid First Name', function () {
+  describe('ENTERING INCORRECT DATA', () => {
+    it('TC-118 should verify that user can not register with invalid First Name', () => {
       for (let i = 0; i < negativeRegisterStep1.invalidName.length; i++) {
         browser.refresh();
         RegisterPage.firstNameInput.setValue(negativeRegisterStep1.invalidName[i]);
@@ -66,7 +66,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       }
     });
 
-    it('TC-119 should verify that user can not register with invalid Last Name', function () {
+    it('TC-119 should verify that user can not register with invalid Last Name', () => {
       for (let i = 0; i < negativeRegisterStep1.invalidName.length; i++) {
         browser.refresh();
         RegisterPage.firstNameInput.setValue(newUser.firstName);
@@ -80,7 +80,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       }
     });
 
-    it('TC-120 should verify that user can not register with invalid Email', function () {
+    it('TC-120 should verify that user can not register with invalid Email', () => {
       for (let i = 0; i < negativeRegisterStep1.invalidEmail1.length; i++) {
         browser.refresh();
         RegisterPage.firstNameInput.setValue(newUser.firstName);
@@ -91,7 +91,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       }
     });
 
-    it('TC-121 should verify that user can not register with already existing email', function () {
+    it('TC-121 should verify that user can not register with already existing email', () => {
       RegisterPage.firstNameInput.setValue(newUser.firstName);
       RegisterPage.lastNameInput.setValue(newUser.lastName);
       RegisterPage.email.setValue(user.new.email);
@@ -102,7 +102,7 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       expect(RegisterPage.errorMessage.getText()).eq(errorMessagesRegistration.emailExistsError);
     });
 
-    it('TC-122 should verify that user can not register with invalid password', function () {
+    it('TC-122 should verify that user can not register with invalid password', () => {
       RegisterPage.firstNameInput.setValue(newUser.firstName);
       RegisterPage.lastNameInput.setValue(newUser.lastName);
       RegisterPage.email.setValue(newUser.email);
@@ -113,28 +113,28 @@ describe('REGISTER PAGE STEP-1 NEGATIVE', function () {
       expect(RegisterPage.errorMessage.getText()).eq(errorMessagesRegistration.wrongPasswordError);
     });
 
-    it('TC-123 should verify that "Required" appears after First Name has been cleared', function () {
+    it('TC-123 should verify that "Required" appears after First Name has been cleared', () => {
       RegisterPage.firstNameInput.setValue(negativeRegisterStep1.oneLetter);
       browser.keys('Back space');
       browser.waitUntil(() => RegisterPage.inputFieldErrorMessages[0].isDisplayed());
       expect(RegisterPage.inputFieldErrorMessages[0].isDisplayed()).true;
     });
 
-    it('TC-124 should verify that "Required" appears after Last Name has been cleared', function () {
+    it('TC-124 should verify that "Required" appears after Last Name has been cleared', () => {
       RegisterPage.lastNameInput.setValue(negativeRegisterStep1.oneLetter);
       browser.keys('Back space');
       browser.waitUntil(() => RegisterPage.inputFieldErrorMessages[0].isDisplayed());
       expect(RegisterPage.inputFieldErrorMessages[0].isDisplayed()).true;
     });
 
-    it('TC-125 should verify that "Required" appears after Email has been cleared', function () {
+    it('TC-125 should verify that "Required" appears after Email has been cleared', () => {
       RegisterPage.email.setValue(negativeRegisterStep1.oneLetter);
       browser.keys('Back space');
       browser.waitUntil(() => RegisterPage.inputFieldErrorMessages[0].isDisplayed());
       expect(RegisterPage.inputFieldErrorMessages[0].isDisplayed()).true;
     });
 
-    it('TC-126 should verify that "Required" appears after password has been cleared', function () {
+    it('TC-126 should verify that "Required" appears after password has been cleared', () => {
       RegisterPage.password.setValue(negativeRegisterStep1.oneLetter);
       browser.keys('Back space');
       browser.waitUntil(() => RegisterPage.inputFieldErrorMessages[0].isDisplayed());

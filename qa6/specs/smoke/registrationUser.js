@@ -20,5 +20,5 @@ describe('NEW USER REGISTER', () => {
 
 after('Should delete a user', async () => {
   const res = await userDelete(newUser.email);
-   expect(res.success).eq(true);
+  expect(res.success).eq(true);
 });

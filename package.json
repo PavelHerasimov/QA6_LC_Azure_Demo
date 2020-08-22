@@ -30,24 +30,29 @@
   "homepage": "https://github.com/rinsal/QA6_Local_Coding#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",
-    "@wdio/allure-reporter": "^6.3.0",
-    "@wdio/cli": "^6.3.0",
-    "@wdio/local-runner": "^6.3.0",
-    "@wdio/mocha-framework": "^6.3.0",
-    "@wdio/spec-reporter": "^6.3.0",
-    "@wdio/sync": "^6.3.0",
-    "allure-commandline": "^2.13.0",
-    "chai": "^4.2.0",
-    "chromedriver": "^84.0.0",
-    "faker": "^4.1.0",
-    "prettier": "^2.0.5",
-    "wdio-chromedriver-service": "^6.0.3"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "newman": "^5.1.2"
+    "@wdio/allure-reporter": "^6.3.6",
+    "@wdio/cli": "^6.4.0",
+    "@wdio/local-runner": "^6.4.0",
+    "@wdio/mocha-framework": "^6.4.0",
+    "@wdio/spec-reporter": "^6.4.0",
+    "@wdio/sync": "^6.4.0",
+    "allure-commandline": "^2.13.0",
+    "axios": "^0.20.0",
+    "chai": "^4.2.0",
+    "chromedriver": "^84.0.1",
+    "faker": "^4.1.0",
+    "newman": "^5.1.2",
+    "wdio-chromedriver-service": "^6.0.3"
   }
 }

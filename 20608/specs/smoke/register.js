@@ -12,7 +12,7 @@ describe('USER REGISTER', () => {
     expect(RegisterPage.headerRegister.getText()).eq(dataRegisterPage.header);
   });
 
-  it('register user', function () {
+  it('register user', () => {
     RegisterPage.registerUser(RegisterData);
     RegisterPageStep2.registerUserStep2(RegisterData);
     expect($('h1').getText()).eq(RegisterData.firstName + ' ' + RegisterData.lastName);

@@ -11,7 +11,7 @@ describe('LOGIN AS ADMIN NEGATIVE SCENARIO', () => {
 
   it('should login as Admin', () => {
     LoginPage.invalidLogin(user.admin.email, RegisterData.password);
-    LoginPage.errorMessageCloseBtn.waitForClickable({WAIT_TIME_MEDIUM});
+    LoginPage.errorMessageCloseBtn.waitForClickable({ WAIT_TIME_MEDIUM });
     expect(LoginPage.errorMessageCloseBtn.isDisplayed()).true;
   });
 });

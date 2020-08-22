@@ -92,7 +92,7 @@ class RegisterPage extends BasePage {
     this.email.setValue(data.email);
     this.password.setValue(data.password);
     this.agreementCheckBox.click();
-    this.registerBtn.waitForClickable(true)
+    this.registerBtn.waitForClickable(true);
     // this.termsAndAgreements();
     this.registerBtn.click();
   }

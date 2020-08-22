@@ -8,7 +8,7 @@ class LoginPage extends BasePage {
     return $('h1');
   }
 
-  get siteName(){
+  get siteName() {
     return $('.site-name');
   }
 
@@ -71,7 +71,6 @@ class LoginPage extends BasePage {
   get txtEmailNotValid() {
     return $('//div[@class="ant-form-item-explain"]/div');
   }
-
 
   open() {
     return super.open('user/login');

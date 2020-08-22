@@ -21,7 +21,7 @@ const expectedRegisterStep1 = {
   firstLastNameMax: `${'a'.repeat(20)}`,
   firstLastName3: 'a\'sssa-',
   email: 'Asdfgh@mail.us',
-  password: 'Azxcvb@123'
-}
+  password: 'Azxcvb@123',
+};
 
 export { registerPageTestResult, expectedRegisterStep1 };

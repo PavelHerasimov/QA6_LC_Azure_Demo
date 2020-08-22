@@ -2,7 +2,6 @@ import BasePage from './Base.page';
 // import TopMenuPage from './topMenu.page';
 
 class LinksPage extends BasePage {
-
   get linksTab() {
     return $$('.ant-menu-item')[3];
   }

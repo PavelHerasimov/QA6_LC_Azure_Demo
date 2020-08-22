@@ -11,7 +11,7 @@ describe('New user registration page', () => {
   });
 });
 
-describe('LOGIN NEW USER', function () {
+describe('LOGIN NEW USER', () => {
   it('TC-039 should Successful login as a new user', () => {
     LoginPage.validLogin(user.new.email, user.new.password);
     ProfilePage.badgeRole.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
@@ -19,7 +19,7 @@ describe('LOGIN NEW USER', function () {
   });
 });
 
-describe('LOGIN ADMIN', function () {
+describe('LOGIN ADMIN', () => {
   console.log(process.env);
   it('TC-040 should Successful login as an Admin', () => {
     LoginPage.validLogin(user.admin.email, user.admin.password);
@@ -28,7 +28,7 @@ describe('LOGIN ADMIN', function () {
   });
 });
 
-describe('LOGIN LEARNER', function () {
+describe('LOGIN LEARNER', () => {
   it('TC-041 should Successfuly login as a learner', () => {
     LoginPage.validLogin(user.learner.email, user.learner.password);
     ProfilePage.badgeRole.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });
@@ -36,7 +36,7 @@ describe('LOGIN LEARNER', function () {
   });
 });
 
-describe('LOGIN NEW STUDENT', function () {
+describe('LOGIN NEW STUDENT', () => {
   it('TC-042 should Successful login as a student', () => {
     LoginPage.validLogin(user.student.email, user.student.password);
     ProfilePage.badgeRole.waitForDisplayed({ timeout: waitTime.WAIT_TIME_MEDIUM });

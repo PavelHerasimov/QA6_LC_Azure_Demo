@@ -5,7 +5,7 @@ import { newUser } from '../../data/fakeData';
 import ProfilePage from '../../../pageObjects/profile.page';
 import { userDelete } from '../../../helpers/deleteNewUserByAxios';
 
-before( 'Should register new user',() => {
+before('Should register new user', () => {
   RegisterPage.open();
   RegisterPage.registerUser(newUser);
 });
@@ -15,7 +15,7 @@ after('Should delete a user', async () => {
   expect(res.success).true;
 });
 
-describe('NEW USER REGISTER STEP2',  () => {
+describe('NEW USER REGISTER STEP2', () => {
   it('URST2-01 Should fill data on the step2', () => {
     RegisterStep2Page.registerUserStep2(newUser);
     expect(ProfilePage.badgeRole.getText()).eq(expected.userBadges.new);

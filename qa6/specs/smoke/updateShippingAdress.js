@@ -1,7 +1,7 @@
 import ShippingAddressPage from '../../../pageObjects/shippingAddress.page';
 
 before(() => {
-  ShippingAddressPage.goToShippingAddressPageAsAdmin()
+  ShippingAddressPage.goToShippingAddressPageAsAdmin();
 });
 
 describe('NEW SHIPPING ADDRESS SUBMITTING', () => {

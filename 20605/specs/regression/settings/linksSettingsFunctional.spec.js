@@ -14,15 +14,15 @@ before(() => {
   LinksPage.linksTab.click();
 });
 
-describe('LINKS FIELD ACCEPT INPUT DATA AND ICONS APPEAR', function () {
+describe('LINKS FIELD ACCEPT INPUT DATA AND ICONS APPEAR', () => {
   beforeEach(() => {
     TopMenuPage.dropDownArrow.click();
     TopMenuPage.dropDownMenuSettings.click();
     LinksPage.linksTab.click();
   });
 
-  describe('RESUME LINK', function () {
-    it('TC-323 should verify that ResumeIcon does not display on ProfilePage before filled field', function() {
+  describe('RESUME LINK', () => {
+    it('TC-323 should verify that ResumeIcon does not display on ProfilePage before filled field', () => {
       clearValue(LinksPage.resumeField);
       LinksPage.saveLinks();
       TopMenuPage.dropDownArrow.click();
@@ -30,22 +30,22 @@ describe('LINKS FIELD ACCEPT INPUT DATA AND ICONS APPEAR', function () {
       expect(ProfilePage.resumeIcon.isDisplayed()).eq(false);
     });
 
-    it('TC-214  should verify that Resume Link field can accept reference ', function() {
+    it('TC-214  should verify that Resume Link field can accept reference ', () => {
       clearValue(LinksPage.resumeField);
       LinksPage.resumeField.setValue(linksSettings.resumeData);
       LinksPage.saveLinks();
       expect(LinksPage.resumeField.getValue()).eq(linksSettings.resumeData);
     });
 
-    it('TC-324 should verify that ResumeIcon is displayed on ProfilePage after filled field', function() {
+    it('TC-324 should verify that ResumeIcon is displayed on ProfilePage after filled field', () => {
       TopMenuPage.dropDownArrow.click();
       TopMenuPage.dropDownMenuProfile.click();
       expect(ProfilePage.resumeIcon.isDisplayed());
     });
   });
 
-  describe('LINKEDIN LINK', function () {
-    it('TC-325 should verify that LinkedInIcon does not display on ProfilePage before filled field', function() {
+  describe('LINKEDIN LINK', () => {
+    it('TC-325 should verify that LinkedInIcon does not display on ProfilePage before filled field', () => {
       clearValue(LinksPage.linkedInField);
       LinksPage.saveLinks();
       TopMenuPage.dropDownArrow.click();
@@ -53,22 +53,22 @@ describe('LINKS FIELD ACCEPT INPUT DATA AND ICONS APPEAR', function () {
       expect(ProfilePage.linkedInIcon.isDisplayed()).eq(false);
     });
 
-    it('TC-215  should verify that LinkedIn Link field can accept reference ', function() {
+    it('TC-215  should verify that LinkedIn Link field can accept reference ', () => {
       clearValue(LinksPage.linkedInField);
       LinksPage.linkedInField.setValue(linksSettings.linkedInData);
       LinksPage.saveLinks();
       expect(LinksPage.linkedInField.getValue()).eq(linksSettings.linkedInData);
     });
 
-    it('TC-326 should verify that LinkedInIcon is displayed on ProfilePage after filled field', function() {
+    it('TC-326 should verify that LinkedInIcon is displayed on ProfilePage after filled field', () => {
       TopMenuPage.dropDownArrow.click();
       TopMenuPage.dropDownMenuProfile.click();
       expect(ProfilePage.linkedInIcon.isDisplayed());
     });
   });
 
-  describe('FACEBOOK LINK', function () {
-    it('TC-327 should verify that FacebookIcon does not display on ProfilePage before filled field', function() {
+  describe('FACEBOOK LINK', () => {
+    it('TC-327 should verify that FacebookIcon does not display on ProfilePage before filled field', () => {
       clearValue(LinksPage.facebookField);
       LinksPage.saveLinks();
       TopMenuPage.dropDownArrow.click();
@@ -76,22 +76,22 @@ describe('LINKS FIELD ACCEPT INPUT DATA AND ICONS APPEAR', function () {
       expect(ProfilePage.facebookIcon.isDisplayed()).eq(false);
     });
 
-    it('TC-216  should verify that Facebook Link field can accept reference ', function() {
+    it('TC-216  should verify that Facebook Link field can accept reference ', () => {
       clearValue(LinksPage.facebookField);
       LinksPage.facebookField.setValue(linksSettings.facebookData);
       LinksPage.saveLinks();
       expect(LinksPage.facebookField.getValue()).eq(linksSettings.facebookData);
     });
 
-    it('TC-336 should verify that FacebookIcon is displayed on ProfilePage after filled field', function() {
+    it('TC-336 should verify that FacebookIcon is displayed on ProfilePage after filled field', () => {
       TopMenuPage.dropDownArrow.click();
       TopMenuPage.dropDownMenuProfile.click();
       expect(ProfilePage.facebookIcon.isDisplayed());
     });
   });
 
-  describe('GITHUB LINK', function () {
-    it('TC-337 should verify that GitHubIcon does not display on ProfilePage before filled field', function() {
+  describe('GITHUB LINK', () => {
+    it('TC-337 should verify that GitHubIcon does not display on ProfilePage before filled field', () => {
       clearValue(LinksPage.gitHubField);
       LinksPage.saveLinks();
       TopMenuPage.dropDownArrow.click();
@@ -99,22 +99,22 @@ describe('LINKS FIELD ACCEPT INPUT DATA AND ICONS APPEAR', function () {
       expect(ProfilePage.gitHubIcon.isDisplayed()).eq(false);
     });
 
-    it('TC-217  should verify that GitHub Link field can accept reference ', function() {
+    it('TC-217  should verify that GitHub Link field can accept reference ', () => {
       clearValue(LinksPage.gitHubField);
       LinksPage.gitHubField.setValue(linksSettings.gitHubData);
       LinksPage.saveLinks();
       expect(LinksPage.gitHubField.getValue()).eq(linksSettings.gitHubData);
     });
 
-    it('TC-338 should verify that GitHubIcon is displayed on ProfilePage after filled field', function() {
+    it('TC-338 should verify that GitHubIcon is displayed on ProfilePage after filled field', () => {
       TopMenuPage.dropDownArrow.click();
       TopMenuPage.dropDownMenuProfile.click();
       expect(ProfilePage.gitHubIcon.isDisplayed());
     });
   });
 
-  describe('CODEWARS LINK', function () {
-    it('TC-339 should verify that CodeWarsIcon does not display on ProfilePage before filled field', function() {
+  describe('CODEWARS LINK', () => {
+    it('TC-339 should verify that CodeWarsIcon does not display on ProfilePage before filled field', () => {
       clearValue(LinksPage.codewarsField);
       LinksPage.saveLinks();
       TopMenuPage.dropDownArrow.click();
@@ -122,21 +122,21 @@ describe('LINKS FIELD ACCEPT INPUT DATA AND ICONS APPEAR', function () {
       expect(ProfilePage.codewarsIcon.isDisplayed()).eq(false);
     });
 
-    it('TC-218  should verify that CodeWars Link field can accept reference ', function() {
+    it('TC-218  should verify that CodeWars Link field can accept reference ', () => {
       clearValue(LinksPage.codewarsField);
       LinksPage.codewarsField.setValue(linksSettings.codewarsData);
       LinksPage.saveLinks();
       expect(LinksPage.codewarsField.getValue()).eq(linksSettings.codewarsData);
     });
 
-    it('TC-340 should verify that CodeWarsIcon is displayed on ProfilePage after filled field', function() {
+    it('TC-340 should verify that CodeWarsIcon is displayed on ProfilePage after filled field', () => {
       TopMenuPage.dropDownArrow.click();
       TopMenuPage.dropDownMenuProfile.click();
       expect(ProfilePage.codewarsIcon.isDisplayed());
     });
   });
 
-  it('TC-219 SaveBtn should be clicable and save all new input data', function () {
+  it('TC-219 SaveBtn should be clicable and save all new input data', () => {
     LinksPage.saveLinks();
     expect(LinksPage.saveLinksBtn.isClickable()).true;
   });

@@ -34,7 +34,7 @@ class SettingsEmailPage extends BasePage {
     return $('//button[@type="submit"]');
   }
 
-  updateEmail(email, newEmail){
+  updateEmail(email, newEmail) {
     this.oldEmailField.setValue(email);
     this.newEmailField.setValue(newEmail);
     this.confirmEmailField.setValue(newEmail);

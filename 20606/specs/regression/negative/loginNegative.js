@@ -4,17 +4,17 @@ const user = require('../../../../testData/user');
 import { incorrectInput } from '../../../testData/login.funct';
 import { loginPage } from '../../../testResult/login.page.expected';
 
-describe('LOGIN NEGATIVE REGRESSION', function () {
+describe('LOGIN NEGATIVE REGRESSION', () => {
   before(() => {
     LoginPage.open();
   });
 
-  it('TC-42 User can not login without password', function () {
+  it('TC-42 User can not login without password', () => {
     LoginPage.inputUsername.setValue(user.learner.email);
     expect(LoginPage.loginBtn.isClickable()).false;
   });
 
-  it('TC-43 User can not login without email', function () {
+  it('TC-43 User can not login without email', () => {
     LoginPage.inputUsername.click();
     do {
       browser.keys('Backspace');
@@ -23,7 +23,7 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     expect(LoginPage.loginBtn.isClickable()).false;
   });
 
-  it('TC-44 User can not login without email and password', function () {
+  it('TC-44 User can not login without email and password', () => {
     LoginPage.inputPassword.click();
     do {
       browser.keys('Backspace');
@@ -31,7 +31,7 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     expect(LoginPage.loginBtn.isClickable()).false;
   });
 
-  it('TC-45 User can not login with correct Email and incorrect password', function () {
+  it('TC-45 User can not login with correct Email and incorrect password', () => {
     LoginPage.inputUsername.setValue(user.learner.email);
     LoginPage.inputPassword.setValue(incorrectInput.password);
     LoginPage.loginBtn.click();
@@ -40,7 +40,7 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     LoginPage.errorMessageCloseBtn.click();
   });
 
-  it('TC-46 User  can not login with correct password and incorrect Email', function () {
+  it('TC-46 User  can not login with correct password and incorrect Email', () => {
     LoginPage.inputUsername.click();
     do {
       browser.keys('Backspace');
@@ -53,7 +53,7 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     LoginPage.errorMessageCloseBtn.click();
   });
 
-  it('TC-47 Field email does not accept name without @ - type vasyamail.ru', function () {
+  it('TC-47 Field email does not accept name without @ - type vasyamail.ru', () => {
     LoginPage.inputUsername.click();
     do {
       browser.keys('Backspace');
@@ -62,7 +62,7 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     expect(LoginPage.txtEmailNotValid.getText()).eq(loginPage.emailNotValid);
   });
 
-  it('TC-48 Field email does not accept name without .', function () {
+  it('TC-48 Field email does not accept name without .', () => {
     LoginPage.inputUsername.click();
     do {
       browser.keys('Backspace');
@@ -71,7 +71,7 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     expect(LoginPage.txtEmailNotValid.getText()).eq(loginPage.emailNotValid);
   });
 
-  it('TC-49 user can not login if he uses Email that does not exist in the system but uses correct password ', function () {
+  it('TC-49 user can not login if he uses Email that does not exist in the system but uses correct password ', () => {
     LoginPage.inputUsername.click();
     do {
       browser.keys('Backspace');
@@ -84,7 +84,7 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     LoginPage.errorMessageCloseBtn.click();
   });
 
-  it('TC-50 user can not login if he uses password that does not exist in the system but uses correct email ', function () {
+  it('TC-50 user can not login if he uses password that does not exist in the system but uses correct email ', () => {
     LoginPage.inputUsername.click();
     do {
       browser.keys('Backspace');
@@ -101,12 +101,12 @@ describe('LOGIN NEGATIVE REGRESSION', function () {
     LoginPage.errorMessageCloseBtn.click();
   });
 
-  it('TC-51 user can not login if press button sighn in with google - redirect', function () {
+  it('TC-51 user can not login if press button sighn in with google - redirect', () => {
     LoginPage.loginGoogleBtn.click();
     expect(LoginPage.headerLogin.getText()).eq(loginPage.header);
   });
 
-  it('TC-52 user can not login if press button sighn in with facebook - redirect', function () {
+  it('TC-52 user can not login if press button sighn in with facebook - redirect', () => {
     LoginPage.loginFacebookBtn.click();
     expect(LoginPage.headerLogin.getText()).eq(loginPage.header);
   });

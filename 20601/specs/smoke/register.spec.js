@@ -18,7 +18,7 @@ describe('USER REGISTER', () => {
     expect(RegisterStep2Page.headerRegisterStep2.getText()).contains(expected.pagesHeaders.RegisterStep2PageHeader);
   });
 
-  it('TC-03-003 Verify that Login Link redirect user from Register Page to Login Page', function () {
+  it('TC-03-003 Verify that Login Link redirect user from Register Page to Login Page', () => {
     RegisterPage.open();
     RegisterPage.loginLink.click();
     expect(LoginPage.header.getText()).contains(expected.pagesHeaders.LoginHeader);
