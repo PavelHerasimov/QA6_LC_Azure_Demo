@@ -1,6 +1,6 @@
 import ContactUsPage from '../../../pageObjects/contactUs.page';
 import user from '../../../testData/user';
-import { textMessageInput } from '../../data/contactUsData';
+import { textMessageInput, textYourRequest } from '../../data/contactUsData';
 
 describe('CONTACT US PAGE - SMOKE', () => {
   before('', () => {
@@ -34,5 +34,6 @@ describe('CONTACT US PAGE - SMOKE', () => {
   it('TC-115 should confirmation message be displayed when clicking Submit Button after filling out the form ', () => {
     ContactUsPage.submitBtn.click();
     browser.waitUntil(() => ContactUsPage.confirmationText.isDisplayed());
+    expect(ContactUsPage.confirmationText.getText()).eq(textYourRequest);
   });
 });

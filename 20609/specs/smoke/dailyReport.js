@@ -19,6 +19,7 @@ describe('CREATE DAILY REPORT', () => {
     DailyReportsPage.selectContentMoraleAndHours[16].click();
     DailyReportsPage.howWasYourDayInput.setValue(textRandom);
     DailyReportsPage.submitBtn.click();
-    browser.waitUntil(() => DailyReportsPage.notificationMessage.getText() === notificationText);
+    browser.waitUntil( () => DailyReportsPage.notificationMessage.getText() === notificationText);
+    expect(DailyReportsPage.notificationMessage.getText() === notificationText);
   });
 });
